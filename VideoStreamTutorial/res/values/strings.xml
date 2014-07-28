@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">Video Stream</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="button">Stream Video</string>
+    <!--app billing-->
+    <string name="billing_not_supported_title">Can\'t make purchases</string>
+    <string name="billing_not_supported_message">The Market billing
+        service is not available at this time.  You can continue to use this app but you
+        won\'t be able to make purchases.</string>
+
+</resources>
