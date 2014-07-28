@@ -6,6 +6,7 @@ import android.widget.ListView;
 import com.guideapp.R;
 import com.guideapp.adapter.ImageAdapter;
 import com.guideapp.model.Image;
+import com.guideapp.utils.Utils;
 
 import java.util.ArrayList;
 
@@ -28,7 +29,7 @@ public class ImageActivity extends Activity
         setContentView(R.layout.activity_video_view_main);
         // Find your VideoView in your video_main.xml layout
         listView = (ListView) findViewById(R.id.lvContent);
-        ImageAdapter videoAdapter = new ImageAdapter(ImageActivity.this, fakeData());
+        ImageAdapter videoAdapter = new ImageAdapter(ImageActivity.this, Utils.getDataFromJsonFile(ImageActivity.this, "image"));
         listView.setAdapter(videoAdapter);
     }
 

@@ -22,9 +22,9 @@ import java.util.ArrayList;
 public class ImageAdapter extends BaseAdapter
 {
     private Activity activity;
-    private ArrayList<Image> images = new ArrayList<Image>();
+    private ArrayList<Object> images = new ArrayList<Object>();
 
-    public ImageAdapter(Activity activity, ArrayList<Image> images)
+    public ImageAdapter(Activity activity, ArrayList<Object> images)
     {
         this.activity = activity;
         this.images = images;
@@ -69,7 +69,7 @@ public class ImageAdapter extends BaseAdapter
             holder = (ViewHolder) v.getTag();
         }
 
-        Image image = images.get(position);
+        Image image = (Image) images.get(position);
 
 //        ImageLoader imgLoader = new ImageLoader(activity.getApplicationContext());
 //        imgLoader.DisplayImage(url, loader, holder.imageView);

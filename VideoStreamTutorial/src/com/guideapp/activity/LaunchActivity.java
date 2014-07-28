@@ -158,7 +158,7 @@ public class LaunchActivity extends Activity
         }
         if (transactions.size()>0)
         {
-            Intent intent = new Intent(LaunchActivity.this, ImageActivity.class);
+            Intent intent = new Intent(LaunchActivity.this, VideoViewActivity.class);
             startActivity(intent);
             finish();
         }

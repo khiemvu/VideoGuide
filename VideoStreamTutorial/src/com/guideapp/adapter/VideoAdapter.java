@@ -23,9 +23,9 @@ import java.util.ArrayList;
 public class VideoAdapter extends BaseAdapter
 {
     private Activity activity;
-    private ArrayList<Video> videos = new ArrayList<Video>();
+    private ArrayList<Object> videos = new ArrayList<Object>();
 
-    public VideoAdapter(Activity activity, ArrayList<Video> videos)
+    public VideoAdapter(Activity activity, ArrayList<Object> videos)
     {
         this.activity = activity;
         this.videos = videos;
@@ -69,7 +69,7 @@ public class VideoAdapter extends BaseAdapter
         {
             holder = (ViewHolder) v.getTag();
         }
-        Video video = videos.get(position);
+        Video video = (Video) videos.get(position);
         holder.tvDescription.setText(video.getDescription());
         try
         {
@@ -78,7 +78,6 @@ public class VideoAdapter extends BaseAdapter
                     activity);
             mediacontroller.setAnchorView(holder.videoView);
             // Get the URL from String VideoURL
-//                Uri pathVideo = Uri.parse(video.getUrl());
             holder.videoView.setMediaController(mediacontroller);
             holder.videoView.setVideoURI(video.getUrl());
 
