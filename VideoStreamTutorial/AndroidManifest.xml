@@ -33,6 +33,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.VideoViewActivity"/>
+        <activity android:name=".activity.ImageActivity"/>
         <!-- Add this service and receiver to your application -->
         <service android:name="net.robotmedia.billing.BillingService"/>
         <receiver android:name="net.robotmedia.billing.BillingReceiver">
